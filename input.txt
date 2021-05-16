@@ -1,0 +1,6 @@
+ax = mG * 2
+if(tmpE2 < 10.3E-2)
+ax = mG @ 2
+if(tmp <= 10.3E-2) else 3>=1
+ifa(tmp <= 10.3E-2) else 3>=1 hEla chau
+if else(tmp <= 10.3E-2) else 3>=1
