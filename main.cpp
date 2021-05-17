@@ -20,23 +20,12 @@ bool isRelop(const Lex& relop){
     }
 }
 
-bool grammarS(vector<Lex> lexical){
-    int i = 0;
-    if (!isTerm(lexical[i])) return false;
-    i++;
-    while(isRelop(lexical[i])){
-        if (!isRelop(lexical[i])) return false;
-        i++;
-        if (!isTerm(lexical[i])) return false;
-        i++;
-    }
-    return true;
-}
-
 int main() {
 
     std::ifstream input( "input.txt" );
 
+    // Se define la regla propuesta en el lab.
+    // Se utilizará punteros a funciones.
     bool (*term)(const Lex&) = &isTerm;
     bool (*relop)(const Lex&) = &isRelop;
     vector<int> recursiveBlocks = {1};
@@ -50,7 +39,6 @@ int main() {
         vector<Lex> lexical = one.analyze();
         cout << S.analyze(lexical) << endl;
         one.print();
-        cout << "\t---" << endl;
     }
     return 0;
 }

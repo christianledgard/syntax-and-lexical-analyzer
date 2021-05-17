@@ -5,6 +5,8 @@
 #ifndef LAB2_SYNTAXANALYZER_H
 #define LAB2_SYNTAXANALYZER_H
 
+#include <utility>
+
 #include "Lex.h"
 
 class SyntaxAnalyzer {
@@ -13,7 +15,7 @@ class SyntaxAnalyzer {
     
     
 public:
-    SyntaxAnalyzer(vector<int> recB, vector<vector<bool(*)(const Lex&)>> b) : recursiveBlocks(recB), blocks(b) {}
+    SyntaxAnalyzer(vector<int> recB, vector<vector<bool(*)(const Lex&)>> b) : recursiveBlocks(std::move(recB)), blocks(std::move(b)) {}
     
     bool analyze(const vector<Lex> &lexical) {
         int id = 0;
