@@ -1,0 +1,5 @@
+abcde
+123==321
+_abc>3.0E-2
+id==id<=id<id
+1.1E3<=abc==def>100

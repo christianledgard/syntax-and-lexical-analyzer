@@ -6,8 +6,12 @@
 #define LAB2_SYNTAXANALYZER_H
 
 #include <utility>
+#include <sstream>
+#include <fstream>
+#include <map>
 
 #include "Lex.h"
+#include "LexAnalyzer.h"
 
 class SyntaxAnalyzer {
     vector<int> recursiveBlocks;
@@ -38,5 +42,20 @@ public:
     }
 };
 
+
+static bool isTerm(const Lex& term){
+    return (term.t == ID || term.t == NUMBER);
+}
+
+static bool isRelop(const Lex& relop){
+    switch(relop.t){
+        case ASSIGN_OP:
+        case MUL_OP:
+        case REL_OP:
+            return true;
+        default:
+            return false;
+    }
+}
 
 #endif //LAB2_SYNTAXANALYZER_H

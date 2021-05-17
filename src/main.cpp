@@ -5,24 +5,11 @@
 #include "LexAnalyzer.h"
 #include "SyntaxAnalyzer.h"
 
-bool isTerm(const Lex& term){
-    return (term.t == ID || term.t == NUMBER);
-}
-
-bool isRelop(const Lex& relop){
-    switch(relop.t){
-        case ASSIGN_OP:
-        case MUL_OP:
-        case REL_OP:
-            return true;
-        default:
-            return false;   
-    }
-}
 
 int main() {
+    cout << "Hello";
 
-    std::ifstream input( "input.txt" );
+    std::ifstream input( "inputold.txt" );
 
     // Se define la regla propuesta en el lab.
     // Se utilizará punteros a funciones.

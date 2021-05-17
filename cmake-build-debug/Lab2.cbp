@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/christianledgard/Documents/2021-I/Comp/syntax-and-lexical-analyzer/Grammar.h">
-			<Option target="Lab2"/>
-		</Unit>
 		<Unit filename="/Users/christianledgard/Documents/2021-I/Comp/syntax-and-lexical-analyzer/Lex.h">
 			<Option target="Lab2"/>
 		</Unit>
